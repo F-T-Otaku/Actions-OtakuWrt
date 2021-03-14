@@ -19,7 +19,7 @@ Build OpenWrt for x86/R2S/Pi4/acrh17 using GitHub Actions.
 - Default login address of **x86/pi4** is [10.10.10.10](10.10.10.10)
 - Default login address of **r2s/acrh17** is [10.0.0.1](10.0.0.1)
 - Default username is **root** and password is **password**.(Universal for all versions)
-- This version of ImmortalWrt is very simple.It only has ssrp, adbyby, aliddns, cpufreq, zerotie, turboacc and unblockmusic.
+- This version of OpenWrt is very simple.lt has only a small part of luci's apps.
 - If you want more applications, fork my repo and make your own version.
 
 ## Acknowledgments
