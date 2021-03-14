@@ -1,3 +1,13 @@
+#
+# Copyright (c) 2021 F-T-Otaku
+#
+# This is free software, licensed under the MIT License.
+# See /LICENSE for more information.
+#
+# https://github.com/F-T-Otaku/Action-OpenWrt-x86-r2s-pi4-acrh17
+# Description: Build OpenWrt for x86/R2S/Pi4/acrh17 using GitHub Actions
+#
+
 name: Build OpenWrt-acrh17
 
 on:
@@ -8,16 +18,14 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
-#  schedule:
-#    - cron: 0 8 * * 5
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: acrh17.config
-  DIY_P1_SH: diy-part1.sh
-  DIY_P2_SH: acrh17.sh
+  CONFIG_FILE: configs/acrh17.config
+  DIY_P1_SH: lede-part1.sh
+  DIY_P2_SH: rt-acrh17-part2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
