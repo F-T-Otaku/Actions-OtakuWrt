@@ -8,7 +8,7 @@ Build OpenWrt for x86/R2S/Pi4/acrh17 using GitHub Actions
 
 ## Usage
 
-- ~~Follwo me~~Click **Releases** and download the firmware you need.
+- ~~Follwo me~~ Click **Releases** and download the firmware you need.
 
 ## Tips
 
