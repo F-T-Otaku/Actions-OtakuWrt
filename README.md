@@ -6,7 +6,9 @@
 
 Build OpenWrt for x86/R2S/Pi4/acrh17 using GitHub Actions.
 
-**Pi4/R2S version is very aggressive.Please make sure you can accept various unexpected situations such as disconnection and crash before use.**
+**Pi4/R2S version is very aggressive.**
+
+**Please make sure you can accept various unexpected situations such as disconnection and crash before use.**
 
 ## Usage
 
