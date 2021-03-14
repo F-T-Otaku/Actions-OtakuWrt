@@ -5,7 +5,8 @@
 ![GitHub Forks](https://img.shields.io/github/forks/F-T-Otaku/Action-OpenWrt-x86-r2s-pi4-acrh17.svg?style=flat-square&label=Forks&logo=github)
 
 Build OpenWrt for x86/R2S/Pi4/acrh17 using GitHub Actions.
-**pi4/r2s version is very aggressive.Please make sure you can accept various unexpected situations such as disconnection and crash before use.**
+
+**Pi4/R2S version is very aggressive.Please make sure you can accept various unexpected situations such as disconnection and crash before use.**
 
 ## Usage
 
