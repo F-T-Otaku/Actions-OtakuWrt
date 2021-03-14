@@ -6,10 +6,9 @@
 # See /LICENSE for more information.
 #
 # https://github.com/F-T-Otaku/Action-OpenWrt-x86-r2s-pi4-acrh17
-# File name: lede-part2.sh
+# File name: x86-part2.sh
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
-
 
 # Modify default IP
 sed -i 's/192.168.1.1/10.10.10.10/g' package/base-files/files/bin/config_generate
