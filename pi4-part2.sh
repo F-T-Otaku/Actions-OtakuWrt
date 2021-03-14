@@ -6,7 +6,7 @@
 # See /LICENSE for more information.
 #
 # https://github.com/F-T-Otaku/Action-OpenWrt-x86-r2s-pi4-acrh17
-# File name: imm-part2.sh
+# File name: pi4-part2.sh
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
 
