@@ -1,4 +1,4 @@
-# Actions-OpenWrt-Otaku
+# Actions-OtakuWrt
 
 [![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square&label=LICENSE)](https://github.com/F-T-Otaku/Action-OpenWrt-x86-r2s-pi4-acrh17/blob/main/LICENSE)
 ![GitHub Stars](https://img.shields.io/github/stars/F-T-Otaku/Action-OpenWrt-x86-r2s-pi4-acrh17.svg?style=flat-square&label=Stars&logo=github)
