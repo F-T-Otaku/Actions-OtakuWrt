@@ -13,4 +13,4 @@
 # Modify default IP
 sed -i 's/192.168.1.1/10.10.10.10/g' package/base-files/files/bin/config_generate
 # Modify default Hostname
-sed -i 's/OpenWrt/OtakuWrt/g' package/base-files/files/bin/config_generate
+sed -i 's/ImmortalWrt/OtakuWrt/g' package/base-files/files/bin/config_generate
