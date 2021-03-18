@@ -21,7 +21,7 @@ on:
 
 env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
-  REPO_BRANCH: master
+  REPO_BRANCH: openwrt-18.06-k5.4
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: configs/pi4.config
   DIY_P1_SH: imm-part1.sh
@@ -165,17 +165,12 @@ jobs:
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
 
-    - name: Delete workflow runs
-      uses: GitRML/delete-workflow-runs@main
-      with:
-        retain_days: 1
-        keep_minimum_runs: 3
-
     - name: Remove old Releases
       uses: dev-drprasad/delete-older-releases@v0.1.0
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       with:
-        keep_latest: 10
+        keep_latest: 20
         delete_tags: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
