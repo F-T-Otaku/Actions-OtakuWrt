@@ -4,7 +4,7 @@
 ![GitHub Stars](https://img.shields.io/github/stars/F-T-Otaku/Action-OpenWrt-x86-r2s-pi4-acrh17.svg?style=flat-square&label=Stars&logo=github)
 ![GitHub Forks](https://img.shields.io/github/forks/F-T-Otaku/Action-OpenWrt-x86-r2s-pi4-acrh17.svg?style=flat-square&label=Forks&logo=github)
 
-Build OpenWrt for x86/R2S/Pi4/acrh17 using GitHub Actions.
+Build OpenWrt for x86/R2S/Pi4/acrh17/R1Plus using GitHub Actions.
 
 **Pi4/R2S version is very aggressive.**
 
@@ -17,7 +17,7 @@ Build OpenWrt for x86/R2S/Pi4/acrh17 using GitHub Actions.
 ## Tips
 
 - Default login address of **x86/pi4** is [10.10.10.10](10.10.10.10)
-- Default login address of **r2s/acrh17** is [10.0.0.1](10.0.0.1)
+- Default login address of **r2s(r1plus)/acrh17** is [10.0.0.1](10.0.0.1)
 - Default username is **root** and password is **password**.(Universal for all versions)
 - This version of OpenWrt is very simple.lt has only a small part of luci's apps.
 - If you want more applications, fork my repo and make your own version.
