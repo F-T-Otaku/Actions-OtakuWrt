@@ -19,3 +19,4 @@
 sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
 sed -i '$a src-git jerryk https://github.com/jerrykuku/openwrt-package' feeds.conf.default
 #git clone -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
+git clone https://github.com/small-5/luci-app-adblock-plus package/luci-app-adblock-plus
