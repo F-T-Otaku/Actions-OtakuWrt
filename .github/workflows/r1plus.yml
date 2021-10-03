@@ -4,11 +4,11 @@
 # This is free software, licensed under the MIT License.
 # See /LICENSE for more information.
 #
-# https://github.com/F-T-Otaku/Action-OpenWrt-x86-r2s-pi4-acrh17
+# https://github.com/F-T-Otaku/Actions-OtakuWrt
 # Description: Build OpenWrt for x86/R2S/Pi4/acrh17 using GitHub Actions
 #
 
-name: Build OpenWrt-Orange Pi R1 Plus
+name: Build OpenWrt-R1-Plus
 
 on:
   repository_dispatch:
@@ -23,9 +23,9 @@ env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
   REPO_BRANCH: openwrt-18.06-k5.4
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: configs/r1plus.config
-  DIY_P1_SH: imm-part1.sh
-  DIY_P2_SH: r2s-part2.sh
+  CONFIG_FILE: SEED/R1-Plus/seed.config
+  DIY_P1_SH: SCRIPTS/R1-Plus/imm-part1.sh
+  DIY_P2_SH: SCRIPTS/R1-Plus/r2s-part2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
@@ -89,12 +89,18 @@ jobs:
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
 
+    - name: Cache
+      uses: klever1988/cachewrtbuild@main
+      with: 
+        ccache: 'true'
+        prefix: ${{ github.workspace }}/openwrt
+
     - name: Compile the firmware
       id: compile
       run: |
         cd openwrt
         echo -e "$(nproc) thread compile"
-        make -j$(nproc) V=s
+        make -j$(($(nproc) + 1)) || make -j$(($(nproc) + 1)) V=s
         echo "::set-output name=status::success"
         grep '^CONFIG_TARGET.*DEVICE.*=y' .config | sed -r 's/.*DEVICE_(.*)=y/\1/' > DEVICE_NAME
         [ -s DEVICE_NAME ] && echo "DEVICE_NAME=_$(cat DEVICE_NAME)" >> $GITHUB_ENV
@@ -149,7 +155,7 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "::set-output name=release_tag::$(date +"%Y.%m.%d")-r1plus"
+        echo "::set-output name=release_tag::$(date +"%Y.%m.%d")-R1-Plus"
         touch release.txt
         [ $UPLOAD_COWTRANSFER = true ] && echo "🔗 [Cowtransfer](${{ steps.cowtransfer.outputs.url }})" >> release.txt
         [ $UPLOAD_WETRANSFER = true ] && echo "🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
@@ -173,3 +179,4 @@ jobs:
         delete_tags: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
