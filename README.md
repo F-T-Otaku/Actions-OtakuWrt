@@ -12,7 +12,7 @@ Build OpenWrt for x86/R2S/Pi4/acrh17/R1Plus using GitHub Actions.
 
 ## Usage
 
-- ~~Follwo me~~ Click [**Releases**](https://github.com/F-T-Otaku/Actions-OtakuWrt/release) and download the firmware you need.
+- ~~Follwo me~~ Click [**Releases**](https://github.com/F-T-Otaku/Actions-OtakuWrt/releases) and download the firmware you need.
 
 ## Tips
 
