@@ -6,7 +6,7 @@
 # See /LICENSE for more information.
 #
 # https://github.com/F-T-Otaku/Actions-OtakuWrt
-# File name: rt-acrh17-part2.sh
+# File name: acrh17-part2.sh
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
 
