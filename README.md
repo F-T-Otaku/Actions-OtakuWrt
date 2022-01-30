@@ -29,7 +29,7 @@ Build OpenWrt for X86/R2S/Pi4/Acrh17/R1Plus/R4S using GitHub Actions.
 - Click the Fork button to create a new repository.
 - Generate `.config` files using [Lede](https://github.com/coolsnowwolf/lede) (for x86 and acrh17) or [ImmortalWrt](https://github.com/immortalwrt/immortalwrt/tree/master) (for others) source code. 
 - You can change source code through environment variables in the workflow file. [**Tutorials**](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
-- Add your own `seed.config` to `SEED` folder.[**Tutorials**](https://github.com/coolsnowwolf/lede/issues/2288)
+- Add your own `seed.config` to `SEED` folder. [**Tutorials**](https://github.com/coolsnowwolf/lede/issues/2288)
 - Select `Build OpenWrt` on the Actions page.
 - Click the `Run workflow` button.
 - When the build is complete, click the `Artifacts` button in the upper right corner of the Actions page to download the binaries.
