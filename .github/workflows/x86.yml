@@ -24,7 +24,7 @@ env:
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: SEED/X86/seed.config
-  DIY_P1_SH: SCRIPTS/X86/lede-part1.sh
+  DIY_P1_SH: SCRIPTS/X86/x86-part1.sh
   DIY_P2_SH: SCRIPTS/X86/x86-part2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
