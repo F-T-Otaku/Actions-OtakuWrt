@@ -15,7 +15,10 @@ git clone -b packages https://github.com/xiaorouji/openwrt-passwall.git ./packag
 git clone -b luci https://github.com/xiaorouji/openwrt-passwall.git ./package/lean/passwall
 cp -rf ./package/lean/passwall_package/* ./package/lean/passwall
 rm -rf ./package/lean/passwall_package
-git clone -b master https://github.com/vernesong/OpenClash/luci-app-openclash.git ./package/lean/luci-app-openclash
+git clone -b master https://github.com/vernesong/OpenClash.git ./package/lean/luci-app-openclash
+mkdir -p ./package/lean/openclash
+cp -rf ./package/lean/luci-app-openclash/luci-app-openclash/* ./package/lean/openclash
+rm -rf ./package/lean/luci-app-openclash
 rm -rf ./package/lean/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git ./package/lean/luci-theme-argon
 git clone -b master https://github.com/jerrykuku/luci-app-argon-config.git ./package/lean/luci-app-argon-config
