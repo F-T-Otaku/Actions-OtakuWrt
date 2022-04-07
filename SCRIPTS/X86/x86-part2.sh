@@ -10,6 +10,15 @@
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
 
+# Add applications
+git clone -b packages https://github.com/xiaorouji/openwrt-passwall.git ./package/lean/passwall_package
+git clone -b luci https://github.com/xiaorouji/openwrt-passwall.git ./package/lean/passwall
+cp -rf ./package/lean/passwall_package/* ./package/lean/passwall
+rm -rf ./package/lean/passwall_package
+git clone -b master https://github.com/vernesong/OpenClash/luci-app-openclash.git ./package/lean/luci-app-openclash
+rm -rf ./package/lean/luci-theme-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git ./package/lean/luci-theme-argon
+git clone -b master https://github.com/jerrykuku/luci-app-argon-config.git ./package/lean/luci-app-argon-config
 # Modify default IP
 sed -i 's/192.168.1.1/10.10.10.10/g' package/base-files/files/bin/config_generate
 # Modify default Hostname
