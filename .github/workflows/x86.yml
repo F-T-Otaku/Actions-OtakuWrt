@@ -48,6 +48,7 @@ jobs:
         sudo swapoff -a
         sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
         sudo -E apt-get -qq update
+        sudo apt-get install libgcc1
         sudo -E apt-get -qq install aria2
         sudo -E wget -P /usr/local/sbin/ https://github.com/HiGarfield/lede-17.01.4-Mod/raw/master/.github/backup/apt-fast
         sudo -E chmod -R 755 /usr/local/sbin/apt-fast
