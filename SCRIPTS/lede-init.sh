@@ -20,8 +20,10 @@ mkdir -p ./package/lean/openclash
 cp -rf ./package/lean/luci-app-openclash/luci-app-openclash/* ./package/lean/openclash
 rm -rf ./package/lean/luci-app-openclash
 # Mosdns
+rm -rf ./package/feeds/helloworld/v2ray-geodata
+rm -rf ./package/feeds/packages/mosdns
 git clone -b master --depth=1 https://github.com/QiuSimons/openwrt-mos ./package/mosdns
-# Theme Argon
+# Theme Argon config
 # rm -rf ./package/feeds/luci/luci-theme-argon
 # git clone -b 18.06 --depth=1 https://github.com/jerrykuku/luci-theme-argon.git ./package/lean/luci-theme-argon
 git clone -b master --depth=1 https://github.com/jerrykuku/luci-app-argon-config.git ./package/lean/luci-app-argon-config
