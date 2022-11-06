@@ -1,14 +1,16 @@
-# Delete old files
-rm -rf lede
-# Clone new lede
-git clone https://github.com/coolsnowwolf/lede
-cd lede
-# Add SSRP
-sed -i "/helloworld/d" "feeds.conf.default"
-echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
-# Update and install feeds
-./scripts/feeds update -a
-./scripts/feeds install -a
+#!/bin/bash
+#
+# Copyright (c) 2022 F-T-Otaku
+#
+# This is free software, licensed under the MIT License.
+# See /LICENSE for more information.
+#
+# https://github.com/F-T-Otaku/Actions-OtakuWrt
+# File name: m68s-part2.sh
+# Description: OpenWrt DIY script part 2 (After Update feeds)
+#
+
+# Add applications
 # Passwall
 git clone -b packages --depth=1 https://github.com/xiaorouji/openwrt-passwall.git ./package/lean/passwall_package
 git clone -b luci --depth=1 https://github.com/xiaorouji/openwrt-passwall.git ./package/lean/passwall
@@ -31,8 +33,3 @@ git clone -b master --depth=1 https://github.com/jerrykuku/luci-app-argon-config
 sed -i 's/192.168.1.1/10.10.10.10/g' package/base-files/files/bin/config_generate
 # Modify default Hostname
 sed -i 's/OpenWrt/OtakuWrt/g' package/base-files/files/bin/config_generate
-# Menuconfig
-make menuconfig
-# Make seed file
-make defconfig
-./scripts/diffconfig.sh > seed.config
