@@ -20,7 +20,7 @@ mkdir -p ./package/lean/openclash
 cp -rf ./package/lean/luci-app-openclash/luci-app-openclash/* ./package/lean/openclash
 rm -rf ./package/lean/luci-app-openclash
 # Mosdns
-find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
+# find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
 find ./ | grep Makefile | grep mosdns | xargs rm -f
 find ./ | grep Makefile | grep luci-app-mosdns | xargs rm -f
 git clone -b master --depth=1 https://github.com/QiuSimons/openwrt-mos ./package/mosdns
