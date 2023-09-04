@@ -12,4 +12,4 @@
 
 # Add a feed source
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
-git clone https://github.com/small-5/luci-app-adblock-plus package/luci-app-adblock-plus
+# git clone https://github.com/small-5/luci-app-adblock-plus package/luci-app-adblock-plus
