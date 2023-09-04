@@ -5,10 +5,10 @@
 # See /LICENSE for more information.
 #
 # https://github.com/F-T-Otaku/Actions-OtakuWrt
-# Description: Build OpenWrt for x86/R2S/Pi4/acrh17 using GitHub Actions
+# Description: Build OpenWrt for R5S using GitHub Actions
 #
 
-name: Build OpenWrt-R1S-H5
+name: Build OpenWrt-R5S
 
 on:
   repository_dispatch:
@@ -21,11 +21,11 @@ on:
 
 env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
-  REPO_BRANCH: openwrt-18.06-k5.4
+  REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: SEED/R1S-H5/seed.config
-  DIY_P1_SH: SCRIPTS/R1S-H5/imm-part1.sh
-  DIY_P2_SH: SCRIPTS/R1S-H5/h5-part2.sh
+  CONFIG_FILE: SEED/R5S/seed.config
+  DIY_P1_SH: SCRIPTS/R5S/imm-part1.sh
+  DIY_P2_SH: SCRIPTS/R5S/r5s-part2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
@@ -164,7 +164,7 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "::set-output name=release_tag::$(date +"%Y.%m.%d")-R1S-H5"
+        echo "::set-output name=release_tag::$(date +"%Y.%m.%d")-R5S"
         touch release.txt
         [ $UPLOAD_COWTRANSFER = true ] && echo "🔗 [Cowtransfer](${{ steps.cowtransfer.outputs.url }})" >> release.txt
         [ $UPLOAD_WETRANSFER = true ] && echo "🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
@@ -184,8 +184,7 @@ jobs:
       uses: dev-drprasad/delete-older-releases@v0.1.0
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       with:
-        keep_latest: 20
+        keep_latest: 10
         delete_tags: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
