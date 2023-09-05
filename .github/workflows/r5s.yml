@@ -20,17 +20,12 @@ on:
         default: "false"
 
 env:
-  REPO_URL: https://github.com/immortalwrt/immortalwrt
-  REPO_BRANCH: master
-  FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: SEED/R5S/seed.config
-  DIY_P1_SH: SCRIPTS/R5S/r5s-part1.sh
-  DIY_P2_SH: SCRIPTS/R5S/r5s-part2.sh
-  UPLOAD_BIN_DIR: false
-  UPLOAD_FIRMWARE: true
-  UPLOAD_COWTRANSFER: false
-  UPLOAD_WETRANSFER: false
-  UPLOAD_RELEASE: true
+  REPO_URL: https://github.com/coolsnowwolf/lede  # New repository URL
+  REPO_BRANCH: master  # Branch to use
+  CONFIG_FILE: SEED/ARMv8/seed.config # New config file for ARMv8
+  DIY_P1_SH: SCRIPTS/ARMv8/armv8-part1.sh  # New DIY script part 1
+  DIY_P2_SH: SCRIPTS/ARMv8/armv8-part2.sh  # New DIY script part 2
+  DEVICE_NAME: armv8  # New device name
   TZ: Asia/Shanghai
 
 jobs:
