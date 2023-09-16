@@ -11,16 +11,6 @@
 #
 
 # Add applications
-# Passwall
-git clone -b packages --depth=1 https://github.com/xiaorouji/openwrt-passwall.git ./package/lean/passwall_package
-git clone -b luci --depth=1 https://github.com/xiaorouji/openwrt-passwall.git ./package/lean/passwall
-cp -rf ./package/lean/passwall_package/* ./package/lean/passwall
-rm -rf ./package/lean/passwall_package
-# Openclash
-git clone -b master --depth=1 https://github.com/vernesong/OpenClash.git ./package/lean/luci-app-openclash
-mkdir -p ./package/lean/openclash
-cp -rf ./package/lean/luci-app-openclash/luci-app-openclash/* ./package/lean/openclash
-rm -rf ./package/lean/luci-app-openclash
 # Mosdns
 # find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
 find ./ | grep Makefile | grep mosdns | xargs rm -f
