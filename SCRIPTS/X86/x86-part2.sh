@@ -13,9 +13,9 @@
 # Add applications
 # Mosdns
 # find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
-find ./ | grep Makefile | grep mosdns | xargs rm -f
-find ./ | grep Makefile | grep luci-app-mosdns | xargs rm -f
-git clone -b master --depth=1 https://github.com/QiuSimons/openwrt-mos ./package/mosdns
+# find ./ | grep Makefile | grep mosdns | xargs rm -f
+# find ./ | grep Makefile | grep luci-app-mosdns | xargs rm -f
+# git clone -b master --depth=1 https://github.com/QiuSimons/openwrt-mos ./package/mosdns
 # Theme Argon
 rm -rf ./package/feeds/luci/luci-theme-argon
 git clone -b 18.06 --depth=1 https://github.com/jerrykuku/luci-theme-argon.git ./package/lean/luci-theme-argon
