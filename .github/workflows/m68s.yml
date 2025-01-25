@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2023 F-T-Otaku
+# Copyright (c) 2025 F-T-Otaku
 #
 # This is free software, licensed under the MIT License.
 # See /LICENSE for more information.
@@ -45,6 +45,17 @@ jobs:
         cat /proc/cpuinfo | grep 'model name'
         ulimit -a
 
+    - name: Free Disk Space
+      uses: jlumbroso/free-disk-space@main
+      with:
+        tool-cache: true
+        android: true
+        dotnet: true
+        haskell: true
+        large-packages: true
+        docker-images: true
+        swap-storage: true
+
     - name: Initialization environment
       env:
         DEBIAN_FRONTEND: noninteractive
@@ -83,7 +94,7 @@ jobs:
       run: cd openwrt && ./scripts/feeds update -a
 
     - name: Install feeds
-      run: cd openwrt && ./scripts/feeds install -a
+      run: cd openwrt && ./scripts/feeds install -a -f -p passwall_packages && ./scripts/feeds install -a
 
     - name: Load custom configuration
       run: |
